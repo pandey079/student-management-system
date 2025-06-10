@@ -129,7 +129,7 @@ app.get('/errors', (req, res) => {
 // Use Routes
 app.use('/students', students);
 app.use('/users', users);
-app.use('/courses', courses);
+app.use('/courses', courses);   
 app.use('/fee-management', fees);
 app.use('/api', api);
 app.use('/uploads', uploads);
