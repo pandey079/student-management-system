@@ -1,5 +1,9 @@
 function getDepartment() {
-    const URL = 'https://student-management-system-hwi6.onrender.com/api/get-department';
+    const baseURL =
+        window.location.hostname === "localhost"
+            ? "http://localhost:3000"
+            : "https://student-management-system-hwi6.onrender.com";
+    const URL = `${baseURL}/api/get-department`;
 
     let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
@@ -20,8 +24,11 @@ function getDepartment() {
 }
 
 function getCourses(dept) {
-
-    const URL = `https://student-management-system-hwi6.onrender.com/api/get-courses?deptName=${dept}`;
+    const baseURL =
+        window.location.hostname === "localhost"
+            ? "http://localhost:3000"
+            : "https://student-management-system-hwi6.onrender.com";
+    const URL = `${baseURL}/api/get-courses?deptName=${dept}`;
 
     let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
@@ -42,7 +49,11 @@ function getCourses(dept) {
 }
 
 function getStudentInfo(studentRollNo) {
-    const URL = `https://student-management-system-hwi6.onrender.com/api/getStudentInfo?studentRollNo=${studentRollNo}`;
+    const baseURL =
+        window.location.hostname === "localhost"
+            ? "http://localhost:3000"
+            : "https://student-management-system-hwi6.onrender.com";
+    const URL = `${baseURL}/api/getStudentInfo?studentRollNo=${studentRollNo}`;
 
     let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
